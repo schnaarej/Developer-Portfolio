@@ -1,0 +1,40 @@
+@font-face{
+    font-family: Volkorn;
+        src: url(../assets/fonts/VollkornSC-Regular.ttf);
+}
+
+html{
+    background-color: black;
+    color: white;
+    height: 100%;
+}
+
+#welcomeBox{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: welcomeAnimation 3s forwards 0s ease-in;
+}
+
+.welcomeLetter{
+    font-weight: lighter;
+    font-size: 4em;
+    padding:10px;
+    font-family: Volkorn;
+}
+
+@keyframes welcomeAnimation{
+    0%{
+        transform: rotate(0);
+        opacity: 0;
+        }
+    80%{
+        transform: rotate(0);
+        opacity: 1;
+        }
+    100%{
+        transform: rotate(0);
+        opacity: 1;
+        }
+}

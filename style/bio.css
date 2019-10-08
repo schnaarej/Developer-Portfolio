@@ -1,0 +1,95 @@
+body{
+    background-color: black;
+}
+
+.bio-page{
+    position: relative;
+    top: 0px;
+    width: 100%;
+    background-image: linear-gradient(90deg, rgba(255, 0, 107, 0.5) 0%,
+     rgba(255, 168, 0, 0.5) 100%),
+     url(../assets/images/bio-background.jpg);
+     background-attachment: fixed;
+     
+}
+
+.bio-page h1{
+    position: relative;
+    margin: 0px 45px;
+    font-size: 64pt;
+}
+
+.bio-section{
+    width: 100%;
+    min-height: 20rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 300px 0px;
+    background-color: white;
+    opacity: 0;
+    animation: contentFade 1s forwards 0s ease-in;
+}
+
+.bio-section:first-of-type{
+    margin-top: 60px;
+    font-size: 1.25em;
+}
+
+.bio-section:last-child{
+    margin-bottom: 0px;
+}
+
+.bio-image{
+    margin: auto 15px;
+    width: 35%;
+    height: 20rem;
+}
+
+.bio-image svg{
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+.bio-content{
+    height: 100%;
+    width: 50%;
+    margin: 25px;
+    color: black;
+}
+
+#profilePic{
+    position: relative;
+    height: 120%;
+    top: -30px;
+}
+
+@media screen and (max-width: 700px){
+    .bio-image{
+        height: unset;
+    }
+
+    .img-last{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #profilePic{
+        position: relative;
+        height: unset;
+        width: 100%;
+    }
+}
+
+/*Eventually add JS for scroll over effect*/
+@keyframes contentFade{
+    0%{
+        transform: rotate(xx);
+        opacity: 0;
+        }
+    100%{
+        opacity: 1;
+        }
+}

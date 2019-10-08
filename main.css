@@ -1,0 +1,135 @@
+/*Import Styling Assets and CSS Variables*/
+@font-face{
+    font-family: Nunito;
+        src: url(assets/fonts/Nunito-Regular.ttf);
+}
+
+:root{
+    --hover-color: #00ff2f;
+}
+
+/*Style HTML Elements*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    background: rgb(0, 0, 0, 0.5);
+    display: flex;
+    z-index: 5;
+    font-size: 14pt;
+}
+
+/*Style Classes*/
+.site-icon{
+    margin-left: 25px;
+}
+
+.site-icon img{
+    position: relative;
+    height: 64px;
+    top: -5px;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    width: 60%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.menu-link{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-link:hover{
+    color: var(--hover-color);
+}
+
+.hamburger img{
+    display: none;
+}
+
+.main-slide{
+    position: relative;
+    top: 0px;
+    height: 100vh;
+    width: 100%;
+    background: var(--main-bg-color);
+    z-index: 0;
+}
+
+.content-body{
+    background-color: var(--content-color);
+    display: flex;
+    padding: 25px;
+}
+
+.footer{
+    background-color: #0f0f0f;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer h4{
+    font-weight: 100;
+}
+
+/*Mobile Friendly Media Query*/
+@media screen and (max-width: 750px){
+    nav{
+        position: fixed;
+    }
+
+    .hamburger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+    }
+    .hamburger img{
+        display: inherit;
+        width: 32px;
+    }
+    
+    .nav-links{
+        position:fixed;
+        background: rgb(0, 0, 0, 0.75);
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(0px at 90% -10%);
+        -webkit-clip-path: circle(0px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;     
+    }
+
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+
+    .main-slide{
+        height: 200vh;
+        flex-direction: column;
+    }
+}

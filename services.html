@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="style/services.css">
+    <title>J. Alan Schnaare Portfolio</title>
+</head>
+<body>
+    <nav>
+        <div class="site-icon">
+            <img src="assets/icons/Site Icon.png" alt="Site Icon">
+        </div>
+        <div class="hamburger">
+            <img src="assets/icons/Menu Icon.png" alt="menu icon">
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html" class="menu-link">Home</a></li>
+            <li><a href="bio.html" class="menu-link">Bio</a></li>
+            <li><a href="focus.html" class="menu-link">Focus & Skills</a></li>
+            <li><a href="projects.html" class="menu-link">Projects</a></li>
+            <li><a href="services.html" class="menu-link">Services</a></li>
+            <li><a href="contact.html" class="menu-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="page">
+        <h1 id="title">Services</h1>
+        <div class="main-slide">
+            <div class="main-card" id="left">
+                <div class="serviceTitle" onclick="Select('AppDev')" >Application Development</div>
+                <div class="serviceTitle" onclick="Select('GraphDes')" >Graphic Design, UI, & UX <br> Engineering</div>
+                <div class="serviceTitle" onclick="Select('BusAdmin')" >Business Admin., e-marketing, & Advertising</div>
+                <div class="serviceTitle" onclick="Select('IT')" >IT Solutions & Networking</div>
+            </div>
+
+            <div class="main-card">
+                <div class="service-card visible" id="AppDev">
+                    <h2 style="text-align: center;">Application Development</h2>
+                    <img class="service-icon" src="assets/icons/computerISO.png" alt="Service Icon">
+                    <p class="description">  
+                        Through my experience and knowledge of software development
+                         I am able to build computer based, web-based, and mobile
+                        applications. The languages and technologies vary based on clients needs and 
+                        scope of project.
+                    </p>
+                </div>
+                <div class="service-card" id="GraphDes">
+                    <h2 style="text-align: center;">Graphic Design, UI, & UX <br> Engineering</h2>
+                    <img class="service-icon" src="assets/icons/UXISO.png" alt="Service Icon">
+                    <p class="description">  
+                        As a designer of graphic designs, user interfaces, and user experiences
+                        I am able to bring clients graphical user interfaces that not only allow data and behavior of the 
+                        software to be read clearly, but also for users to use the software intuitively. I am also
+                        able to create 2d and 3d art that clearly expresses clients as a brand.
+                    </p>
+                </div>
+                <div class="service-card" id="BusAdmin">
+                    <h2 style="text-align: center;">Business Admin., e-marketing, & Advertising</h2>
+                    <img class="service-icon" src="assets/icons/OfficeBuildingISO.png" alt="Service Icon">
+                    <p class="description"> 
+                        As a business administration minor, I am able to succesfully manage teams,
+                        keep track of common business procedures, run marketing and advertising campaigns, and
+                        increase a clients presence both online and offline.
+                    </p>
+                </div>
+                <div class="service-card" id="IT">
+                    <h2 style="text-align: center;">IT Solutions & Networking</h2>
+                    <img class="service-icon" src="assets/icons/CircuitISO.png" alt="Service Icon">
+                    <p class="description"> 
+                        Data networking and security are important to me in every project I am involved in.
+                        As a computer science major and software developer it is important that the information,
+                        systems, and tools companies use not only be secure, but also work well together. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+            <h4>Created by J. Alan Schnaare</h4>
+    </div>
+    
+        <!--Script Import-->
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/serviceSelector.js"></script>
+    
+</body>
+</html>
